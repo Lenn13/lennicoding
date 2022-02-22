@@ -1,0 +1,738 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap");
+@import url("https://css.gg/mail.css");
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  --color-darkgrey: #262626;
+  --color-yellow: #ebcc34;
+  --color-turquoise: #179b9e;
+  --color-white: #ffffff;
+  --color-blockBG: rgba(255, 255, 255, 0.1);
+  --color-hoverShadow: rgba(235, 204, 52, 0.81);
+  --color-turquoiseShadow: #179b9e;
+  --color-cacaca: #cacaca;
+  --color-black: #000000;
+  --color-middleBar: #616a77;
+}
+
+body turqoise {
+  color: var(--color-turquoise);
+}
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  text-align: center;
+}
+
+.generelBG {
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-color: var(--color-darkgrey);
+}
+
+.nav {
+  text-align: left;
+  height: 70px;
+}
+
+.logo {
+  font-family: "Source Code Pro", monospace;
+  color: var(--color-yellow);
+  font-size: 25px;
+}
+
+.menu {
+  background-color: var(--color-darkgrey);
+  width: 100%;
+  margin: 0 30px 0 0;
+  z-index: 1;
+  position: absolute;
+}
+
+.menu a {
+  text-decoration: none;
+  margin: 0 10px;
+  line-height: 70px;
+}
+
+label {
+  display: none;
+}
+
+#toggle {
+  display: none;
+}
+
+.navbarFont {
+  font-family: "Source Code Pro", monospace;
+  color: var(--color-white);
+  font-size: 25px;
+}
+
+.navbarFont:hover {
+  color: var(--color-yellow);
+}
+
+.menuIcon {
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 40px;
+  width: 40px;
+}
+
+.generalText {
+  font-family: "Fira Code", monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color-white);
+}
+
+.generalCodeText {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color-white);
+}
+
+.generalCodeText yellow {
+  color: var(--color-yellow);
+}
+
+.curved {
+  background-color: var(--color-white);
+  color: var(--color-darkgrey);
+  text-align: center;
+  width: 100%;
+}
+
+.curved div {
+  margin-bottom: 100px;
+}
+
+.curved h1 {
+  font-size: 3.5rem;
+  font-family: "Fira Code", monospace;
+  margin-top: 0;
+}
+
+.curved p {
+  font-size: 2rem;
+  margin-left: 30px;
+  font-family: "Fira Code", monospace;
+  margin-top: 0 5rem 0 5rem;
+  margin-right: 20px;
+  margin-bottom: 100px;
+}
+
+.curved svg {
+  display: block;
+}
+
+#Resume {
+  align-items: center;
+}
+
+.curved.upper {
+  background-color: var(--color-darkgrey);
+}
+
+.lenniPortrait {
+  border-radius: 600px;
+  height: 400px;
+  margin: auto;
+  display: block;
+  align-items: center;
+  float: none;
+}
+
+.skills-section {
+  padding: 0;
+  font-family: "Fira Code", monospace;
+  color: var(--color-white);
+  min-height: 50vh;
+  display: flex;
+}
+
+.skills {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.skill-name {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.skill-bar {
+  transition: 0.25s ease-in-out;
+  height: 20px;
+  background: var(--color-cacaca);
+  border-radius: 8px;
+}
+
+.skill-per {
+  height: 20px;
+  background-color: var(--color-turquoise);
+  border-radius: 8px;
+  width: 0;
+  transition: 2s linear;
+  position: relative;
+}
+
+.skill-per::before {
+  content: attr(per);
+  position: absolute;
+  padding: 4px 6px;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-size: 12px;
+  border-radius: 4px;
+  top: -35px;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.skill-per::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-white);
+  top: -16px;
+  right: 0;
+  transform: translateX(50%) rotate(45deg);
+  border-radius: 2px;
+}
+
+.skillsHead {
+  font-size: 3.5rem;
+  font-family: "Fira Code", monospace;
+  margin-top: 0;
+  color: var(--color-white);
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.generalSkill h4 {
+  font-family: "Fira Code", monospace;
+  color: var(--color-cacaca);
+  font-size: 50px;
+  text-align: center;
+  transition: 0.25s ease-in-out;
+  margin-top: 15px;
+}
+
+.skillText:hover {
+  color: var(--color-turquoise);
+}
+
+.littleSkillText {
+  font-family: "Fira Code", monospace;
+  color: var(--color-cacaca);
+  font-size: 15px;
+  margin-top: -60px;
+  text-align: center;
+}
+
+.generalSkill {
+  position: relative;
+  transition: 0.25s ease-in-out;
+  background-color: var(--color-blockBG);
+  border-radius: 15px;
+  width: 60%;
+  margin: auto;
+  padding: 15px;
+  margin-bottom: 25px;
+}
+
+.generalSkill:hover {
+  box-shadow: 2px 1px 20px 6px var(--color-turquoiseShadow);
+}
+
+#sec-1 {
+  position: relative;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-down {
+  height: 80px;
+  width: 35px;
+  border: 2px solid var(--color-cacaca);
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.scroll-down::before,
+.scroll-down::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  border: 2px solid var(--color-cacaca);
+  height: 10px;
+  width: 10px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1s ease-in-out infinite;
+}
+
+.scroll-down::after {
+  top: 20%;
+  animation-delay: 0.3s;
+}
+
+@keyframes scroll-down {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 90%;
+  }
+}
+
+.rightFlyIn {
+  -webkit-animation: rightFlyIn 1.2s both;
+  -moz-animation: rightFlyIn 1.2s both;
+  -o-animation: rightFlyIn 1.2s both;
+  animation: rightFlyIn 1.2s both;
+}
+
+.leftFlyIn {
+  -webkit-animation: leftFlyIn 1.2s both;
+  -moz-animation: leftFlyIn 1.2s both;
+  -o-animation: leftFlyIn 1.2s both;
+  animation: leftFlyIn 1.2s both;
+}
+
+@-webkit-keyframes leftFlyIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes leftFlyIn {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes leftFlyIn {
+  0% {
+    opacity: 0;
+    -o-transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes leftFlyIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes rightFlyIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes rightFlyIn {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes rightFlyIn {
+  0% {
+    opacity: 0;
+    -o-transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes rightFlyIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ResumeTop {
+  border-radius: 40px;
+  margin-top: 150px;
+  width: 100%;
+  height: 100px;
+}
+
+.ResumeTop h1 {
+  margin-top: -200px;
+  font-size: 3.5rem;
+  font-family: "Fira Code", monospace;
+  margin-top: 0;
+  color: var(--color-white);
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.Projects {
+  background-color: var(--color-blockBG);
+  border-radius: 15px;
+  width: 60%;
+  margin: auto;
+  padding: 10px;
+  margin-bottom: 25px;
+}
+
+.Projects h5 {
+  color: var(--color-turquoise);
+  font-family: "Source Code Pro", monospace;
+  font-size: 15px;
+  text-align: center;
+}
+
+.Projects h4 {
+  margin-top: -0px;
+  color: var(--color-cacaca);
+  font-family: "Source Code Pro", monospace;
+  font-size: 20px;
+  text-align: center;
+}
+
+.Projects p {
+  color: var(--color-cacaca);
+  font-family: "Source Code Pro", monospace;
+  font-size: 15px;
+  text-align: center;
+}
+
+.Projects turqoise {
+  color: var(--color-turquoise);
+  text-align: center;
+}
+
+.Projects div {
+  text-align: center;
+}
+
+.aboutLink {
+  margin-top: 5px;
+  margin-bottom: 2px;
+  font-size: 16px;
+  transition: 0.25s ease-in-out;
+}
+
+.skillTexts {
+  position: relative;
+}
+
+.ProjectsDiv {
+  position: relative;
+}
+
+.aboutLink:hover {
+  color: var(--color-cacaca);
+}
+
+.githubLink {
+  text-decoration: none;
+  font-family: "Source Code Pro", monospace;
+  color: var(--color-yellow);
+  font-size: 16px;
+  font-weight: lighter;
+  margin: auto;
+  transition: 0.5s ease-in-out;
+}
+
+.githubLink:hover {
+  color: var(--color-cacaca);
+}
+
+.contactBG {
+  margin-top: 70px;
+  height: 270px;
+  position: relative;
+  width: 100%;
+  background-color: var(--color-blockBG);
+}
+
+.contactBG h1 {
+  font-size: 3.5rem;
+  font-family: "Fira Code", monospace;
+  margin-top: 0;
+  color: var(--color-white);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contactFont {
+  font-size: 1rem;
+  font-family: "Fira Code", monospace;
+  margin-top: -25px;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.mailIcon {
+  height: 50px;
+  width: 80px;
+  transition: 0.25s ease-in-out;
+}
+
+.mailIconMargin {
+  margin-left: -150px;
+}
+
+.Icons {
+  text-align: center;
+}
+
+.footer h2 {
+  margin-top: 15px;
+}
+
+.mailIcon:hover {
+  height: 55px;
+  width: 85px;
+}
+
+.githubIcon {
+  height: 50px;
+  width: 110px;
+  transition: 0.25s ease-in-out;
+}
+
+.githubIcon:hover {
+  height: 55px;
+  width: 115px;
+}
+
+.githubIconMargin {
+  margin-top: -55px;
+}
+
+.discordIcon {
+  height: 50px;
+  width: 50px;
+  transition: 0.25s ease-in-out;
+}
+
+.discordIcon:hover {
+  height: 55px;
+  width: 55px;
+}
+
+.discordIconMargin {
+  margin-top: -53px;
+  margin-left: 150px;
+}
+
+.container {
+  max-width: 1024px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.contactBG h2 {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-family: "Source Code Pro", monospace;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.container2 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -80px;
+  margin-bottom: 50px;
+}
+
+.container2 p {
+  font-size: 3rem;
+  font-family: "Source Code Pro", monospace;
+  color: var(--color-cacaca);
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+  padding: 0.5rem;
+}
+
+.typed-text {
+  font-weight: normal;
+  color: var(--color-turquoise);
+  pointer-events: none;
+}
+
+.cursor.typing {
+  animation: none;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  background-color: var(--color-cacaca);
+  margin-left: 0.1rem;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    background-color: var(--color-cacaca);
+  }
+  49% {
+    background-color: var(--color-cacaca);
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: var(--color-cacaca);
+  }
+}
+
+@media (max-width: 1200px) {
+  .lenniPortrait {
+    border-radius: 600px;
+    height: 400px;
+    margin: auto;
+    display: block;
+    align-items: center;
+    float: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .lenniPortrait {
+    border-radius: 600px;
+    height: auto;
+    width: 100%;
+    margin: auto;
+    display: block;
+    align-items: center;
+    float: none;
+  }
+
+  label {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu {
+    text-align: center;
+    width: 100%;
+    display: none;
+    transition: 1s ease-in-out;
+  }
+  .menu a {
+    display: block;
+    border-bottom: 2px solid var(--color-cacaca);
+    margin: 0;
+  }
+  #toggle:checked + .menu {
+    transition: 1s ease-in-out;
+    display: block;
+    overflow: visible;
+  }
+}
+
+@media (min-width: 500px) {
+  .text {
+    text-align: center;
+    margin-top: 300px;
+    margin-left: -200px;
+    font-size: 80px;
+  }
+
+  .scroll-down {
+    height: 80px;
+    width: 35px;
+    border: 2px solid var(--color-cacaca);
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 40px;
+  }
+
+  .ResumeTop {
+    margin-bottom: 100px;
+  }
+
+  .curved p {
+    font-size: 1.5rem;
+    margin-left: 30px;
+    font-family: "Fira Code", monospace;
+    margin-top: 0 5rem 0 5rem;
+    margin-right: 20px;
+    margin-bottom: 100px;
+  }
+}

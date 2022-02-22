@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lenni Dev</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="img/Favicon.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
+
+
+
+    "></script>
+  </head>
+  <body class="generelBG">
+    <section>
+      <div class="nav">
+        <label for="toggle"
+          ><img src="img/menüicon.png" alt="" class="menuIcon"
+        /></label>
+        <input type="checkbox" id="toggle" />
+
+        <div class="menu">
+          <a class="logo">.lenni</a>
+          <a href="#About" class="navbarFont">About</a>
+          <a href="#Projects" class="navbarFont">Projects</a>
+          <a href="#Contact" class="navbarFont">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <section style="pointer-events: none">
+      <div id="sec-1" class="sectionScroll">
+        <div class="container2">
+          <p>
+            I'm a <span class="typed-text"></span
+            ><span class="cursor typing">&nbsp;</span>
+          </p>
+        </div>
+        <script src="main.js"></script>
+      </div>
+    </section>
+
+    <section>
+      <div id="showDiv" style="visibility: hidden; transition: 2s ease-in-out;"><dov class="containerScroll">
+        <a href="#About"><div class="scroll-down"></div></a>
+      </dov></div>
+      <script src="main2.js"></script>
+    </section>
+
+    <section id="sec-2" class="sectionScroll">
+      <div id="About">
+        <div class="containerScroll">
+          <div class="curved upper">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319">
+              <path
+                fill="#ffffff"
+                fill-opacity="1"
+                d="M0,32L30,42.7C60,53,120,75,180,96C240,117,300,139,360,128C420,117,480,75,540,80C600,85,660,139,720,154.7C780,171,840,149,900,128C960,107,1020,85,1080,85.3C1140,85,1200,107,1260,112C1320,117,1380,107,1410,101.3L1440,96L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
+              ></path>
+            </svg>
+          </div>
+          <div class="curved">
+            <div>
+              <h1>#01 <turqoise>About Me;</turqoise></h1>
+              <img
+                src="img/LenniPortrait.jpg"
+                class="lenniPortrait leftFlyIn"
+                alt="lenni portrait"
+              />
+              <p>
+                My name is Lenni, I'm 13 years old and I'm an aspiring Software
+                Developer from munich with lots of different ideas for projects.
+                I'm coding since a year now and in this time, I got much
+                experience in Coding, UI Design, Mobile Development and fixing
+                Bugs and all that stuff.
+              </p>
+              <p class="otherTextAbout">
+                If you have a project and are looking for someone to implement
+                it for you, just write to me at the contact part of this
+                website.
+              </p>
+            </div>
+            <div class="aboutMargin"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319" class="curvedSVG">
+              <path
+                fill="#262626"
+                fill-opacity="1"
+                d="M0,32L30,42.7C60,53,120,75,180,96C240,117,300,139,360,128C420,117,480,75,540,80C600,85,660,139,720,154.7C780,171,840,149,900,128C960,107,1020,85,1080,85.3C1140,85,1200,107,1260,112C1320,117,1380,107,1410,101.3L1440,96L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <div>
+      <h1 class="skillsHead" id="Skills">#02 <turqoise>Skills;</turqoise></h1>
+    </div>
+    <section>
+      <div class="skills-section">
+        <div class="skills">
+          <div class="skill">
+            <div class="skill-name">C#</div>
+            <div class="skill-bar">
+              <div class="skill-per" per="60"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-name">HTML</div>
+            <div class="skill-bar">
+              <div class="skill-per" per="40"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-name">CSS</div>
+            <div class="skill-bar">
+              <div class="skill-per" per="30"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-name">UI Design</div>
+            <div class="skill-bar">
+              <div class="skill-per" per="30"></div>
+            </div>
+          </div>
+        </div>
+        <script>
+          $(".skill-per").each(function () {
+            var $this = $(this);
+            var per = $this.attr("per");
+            $this.css("width", per + "%");
+            $({ animatedValue: 0 }).animate(
+              { animatedValue: per },
+              {
+                duration: 1000,
+                step: function () {
+                  $this.attr("per", Math.floor(this.animatedValue) + "%");
+                },
+                complete: function () {
+                  $this.attr("per", Math.floor(this.animatedValue) + "%");
+                },
+              }
+            );
+          });
+        </script>
+      </div>
+      
+
+      <div class="skillTexts">
+        <div class="generalSkill rightFlyIn generalHover" style="margin-top: 30px;">
+          <div>
+            <h4>C#</h4>
+            <p class="littleSkillText">
+              I have been programming in this language for a year and every day
+              I expand my knowledge of C#. If you want to see my C# projects, then just have a
+              look at the project section on my site.
+            </p>
+            <p
+              class="littleSkillText aboutLink"
+              onclick="location.href='https://www.google.com/search?q=C%23&sxsrf=APq-WBuYi_ZJW7TFRrVqmRspCTNK44jqcg%3A1645267504156&source=hp&ei=MMoQYv6LB4qXxc8Pu8StgAE&iflsig=AHkkrS4AAAAAYhDYQIdZ9JyM9zNaKPwh9dOuf3kxW-bS&ved=0ahUKEwj-45KJy4v2AhWKS_EDHTtiCxAQ4dUDCAk&uact=5&oq=C%23&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyBAgjECcyBAgjECcyBAgAEEMyBAgAEEMyBAgAEEMyBwgAELEDEEMyBAgAEEMyBwgAELEDEEMyBAgAEEM6CgguEMcBENEDEEM6CwgAEIAEELEDEIMBOgUIABCABDoICAAQgAQQsQNQAFilA2CcBmgAcAB4AIABZIgBswGSAQMxLjGYAQCgAQE&sclient=gws-wiz';"
+            >
+              <turqoise>➤ About C#</turqoise>
+            </p>
+          </div>
+        </div>
+
+        <div class="generalSkill rightFlyIn generalHover">
+          <div>
+            <h4>HTML</h4>
+            <p class="littleSkillText">
+              I've learned HTML since a year now and I've got much experience
+              in: "How to build amazing looking Websites" and the Logic. At the
+              Project Part you can see all the Websites I've ever build. E.g. a
+              Code Blog or etc.
+            </p>
+            <p
+              class="littleSkillText aboutLink"
+              onclick="location.href='https://www.google.com/search?q=HTML&sxsrf=APq-WBtRRV6FThMifR-_agIe-MvSp9-RJQ%3A1645267507728&ei=M8oQYtbdK4CCxc8P1tWEoAE&ved=0ahUKEwiWw-6Ky4v2AhUAQfEDHdYqARQQ4dUDCA4&uact=5&oq=HTML&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyBAgjECcyBAgjECcyBwgAELEDEEMyBAgAEEMyBAgAEEMyBAgAEEMyBQgAEIAEMgcIABCxAxBDMg0IABCABBCHAhCxAxAUOgYIIxAnEBM6EQguEIAEELEDEIMBEMcBEKMCOgsIABCABBCxAxCDAToLCC4QgAQQxwEQowI6CAguELEDEIMBOggIABCxAxCDAUoECEEYAEoECEYYAFAAWMACYKAFaABwAHgAgAFfiAHWApIBATSYAQCgAQHAAQE&sclient=gws-wiz';"
+            >
+              <turqoise>➤ About HTML</turqoise>
+            </p>
+          </div>
+        </div>
+
+        <div class="generalSkill rightFlyIn generalHover">
+          <div>
+            <h4>CSS</h4>
+            <p class="littleSkillText">
+              I've used also CSS for my Website because I want the Website look
+              as best as It can be. I've been learning CSS since a few Months.
+              So I've much experience in that Language. At the Project Part you
+              can also see that Projects.
+            </p>
+            <p
+              class="littleSkillText aboutLink"
+              onclick="location.href='https://www.google.com/search?q=CSS&sxsrf=APq-WBsejU0INvCGF_hjH3ttWUzvirmMTw%3A1645267855833&ei=j8sQYuqkMo2YkwWoy5DYBA&ved=0ahUKEwiqqO2wzIv2AhUNzKQKHaglBEsQ4dUDCA4&uact=5&oq=CSS&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyBAgjECcyBggjECcQEzIHCAAQsQMQQzINCAAQgAQQhwIQsQMQFDIECAAQQzIECAAQQzINCAAQgAQQhwIQsQMQFDIECAAQQzIICAAQgAQQsQM6BwgjELADECc6BwgAEEcQsAM6BwgAELADEEM6CggAEOQCELADGAA6DwguENQCEMgDELADEEMYAToKCC4QxwEQ0QMQQzoLCAAQgAQQsQMQgwE6BQgAEIAEOgoIABCABBCHAhAUOgQIABATOgYIABAeEBM6BwgjEOoCECc6CAguEIAEENQCOgsILhCABBDHARCvAUoECEEYAEoECEYYAVDDBFiqImDeJGgIcAF4AIABgAGIAZoGkgEDNy4ymAEAoAEBsAEKyAERwAEB2gEGCAAQARgJ2gEGCAEQARgI&sclient=gws-wiz';"
+            >
+              <turqoise>➤ About CSS</turqoise>
+            </p>
+          </div>
+        </div>
+
+        <div class="generalSkill rightFlyIn generalHover">
+          <div>
+            <h4 class="skillText">UI Design</h4>
+            <p class="littleSkillText">
+              I've learned UI Design since a few months and I expand my
+              knowledge everyday. I know which color go best with each other and
+              how to find the perfect look.
+            </p>
+            <p
+              class="littleSkillText aboutLink"
+              onclick="location.href='https://www.google.com/search?q=ui+design&sxsrf=APq-WBvPYMSdQiegXlcmA5-yXCNljxL8og%3A1645267880238&ei=qMsQYvb6DcH6sAevnadg&oq=UI+Desig&gs_lcp=Cgdnd3Mtd2l6EAMYADIICAAQgAQQsQMyBQgAEIAEMgUIABCABDIECAAQQzIFCAAQgAQyBAgAEEMyCAgAEIAEEMkDMgQIABBDMgUIABCABDIECAAQQzoHCCMQsAMQJzoHCAAQRxCwAzoHCAAQsAMQQzoKCAAQ5AIQsAMYADoSCC4QxwEQ0QMQyAMQsAMQQxgBOg8ILhDUAhDIAxCwAxBDGAE6CgguEMcBEKMCECc6BAgjECc6DgguEIAEELEDEIMBENQCOgsILhCABBDHARDRAzoLCAAQgAQQsQMQgwE6CAguELEDEIMBOggIABCxAxCDAToHCAAQsQMQQzoOCC4QgAQQsQMQxwEQ0QM6EAguEIAEELEDEMcBENEDEAo6BwgAEIAEEAo6CwguEIAEEMcBEK8BSgQIQRgASgQIRhgBUIoHWKwUYI4eaAJwAXgAgAF9iAGHBpIBAzUuM5gBAKABAcgBEsABAdoBBggAEAEYCdoBBggBEAEYCA&sclient=gws-wiz';"
+            >
+              <turqoise>➤ About UI Design</turqoise>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Projects">
+      <!--Resume Top Stuff-->
+      <div class="ResumeTop">
+        <h1>#03 <turqoise>Projects;</turqoise></h1>
+      </div>
+
+      <!--Projects and Timeline-->
+      <div id="ProjectsDiv">
+        <div class="Projects" style="margin-top: 100px;">
+        <h4>Hangman Game</h4>
+        <p>
+          I have programming a simple Hangman game using C#. I've used Visual
+          Studio Code as an IDE. The game is running in the Console, so with no
+          GUI. It was a lot of fun.
+        </p>
+        <div>
+          <p
+            onclick="location.href='https://github.com/Lenn13';"
+            class="githubLink"
+            target="_blank"
+            style="display: inline"
+          >
+            <turqoise>➤ View Code</turqoise>
+          </p>
+          <p style="display: inline">C#</p>
+          <p style="display: inline"><turqoise> 05.12.21</turqoise></p>
+        </div>
+      </div>
+
+      <div class="Projects">
+        <h4>ToDo App</h4>
+        <p>
+          Through various YouTube videos I programmed a very simple ToDo app but
+          that gave me a lot of experience with Flutter and Dart. I am always
+          ready to learn new things about mobile development.
+        </p>
+        <div>
+          <p
+            onclick="location.href='https://github.com/Lenn13';"
+            class="githubLink"
+            target="_blank"
+            style="display: inline"
+          >
+            <turqoise>➤ View Code</turqoise>
+          </p>
+          <p style="display: inline">Flutter</p>
+          <p style="display: inline"><turqoise> 20.12.21</turqoise></p>
+        </div>
+      </div>
+
+      <div class="Projects">
+        <h4>TicTacToe Game</h4>
+        <p>
+          I have programming a simple TicTacToe game using C#. I've used Visual
+          Studio as an IDE. Later I've revised the Code and switched from about
+          400 Characters to 250 Characters. It was a lot of fun.
+        </p>
+        <div>
+          <p
+            onclick="location.href='https://github.com/Lenn13';"
+            class="githubLink"
+            target="_blank"
+            style="display: inline"
+          >
+            <turqoise>➤ View Code</turqoise>
+          </p>
+          <p style="display: inline">C#</p>
+          <p style="display: inline"><turqoise> 05.01.22</turqoise></p>
+        </div>
+      </div>
+
+      <div class="Projects">
+        <h4>Discord Bot</h4>
+        <p>
+          Through various YouTube-Videos I've learned the Basics of Discord.NET
+          Developement. After that I've coded 2 Discord-Bots who have different
+          commands also a meme command and other stuff.
+        </p>
+        <div>
+          <p
+            onclick="location.href='https://github.com/Lenn13';"
+            class="githubLink"
+            target="_blank"
+            style="display: inline"
+          >
+            <turqoise>➤ View Code</turqoise>
+          </p>
+          <p style="display: inline">C#</p>
+          <p style="display: inline"><turqoise> 10.01.22</turqoise></p>
+        </div>
+      </div>
+
+      <div class="Projects">
+        <h4>This Portfolio :D</h4>
+        <p>
+          I've learned HTML and CSS a few months ago and I already had a little
+          Project, but then I had the Idea to code an Portfolio and that's what
+          happen.
+        </p>
+        <div>
+          <p
+            onclick="location.href='https://github.com/Lenn13';"
+            class="githubLink"
+            target="_blank"
+            style="display: inline"
+          >
+            <turqoise>➤ View Code</turqoise>
+          </p>
+          <p style="display: inline">HTML CSS JavaScript</p>
+          <p style="display: inline"><turqoise> 18.02.22</turqoise></p>
+        </div>
+      </div></div>
+      
+    </section>
+
+    <section id="Contact">
+      <div class="contactBG">
+        <h1>#04 <turqoise>Contact;</turqoise></h1>
+        <p class="contactFont">
+          interested? feel free to contact my on social media or on e-mail
+        </p>
+        <div class="Icons">
+          <img
+            src="img/MailIcon.png"
+            alt="MailIcon"
+            class="mailIcon mailIconMargin"
+            onclick="location.href='mailto:codingwithlenni@gmail.com';"
+          />
+
+          <div class="githubIconMargin">
+            <img
+              src="img/GithubIcon.png"
+              class="githubIcon"
+              alt="github"
+              onclick="location.href='https://github.com/Lenn13';"
+            />
+          </div>
+          <div class="discordIconMargin">
+            <img
+              src="img/DiscordIcon.png"
+              alt="discordIcon"
+              class="discordIcon"
+              onclick="location.href='https://discord.com/users/~lenni#9057';"
+            />
+          </div>
+        </div class="footer">
+        <h2>©2022 Lennart Fock</h2>
+      </div>
+    </section>
+  </body>
+</html>
